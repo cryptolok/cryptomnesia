@@ -113,6 +113,8 @@ As an alternative to SOIC pins, you can connect programmer directly to DigiSpark
 
 Check-out my [setup](https://github.com/cryptolok/cryptomnesia/tree/master/setup).
 
+![](https://github.com/cryptolok/cryptomnesia/raw/master/setup/connection.jpg =302x403)
+
 You can see what those fuse values are for and what they do [here](http://www.engbedded.com/fusecalc). You can also adapt them to suit your needs.
 
 If you don't trust my firmware or/and want to modify the USB IDs, you can compile [micronucleus](https://github.com/micronucleus/micronucleus) yourself by modifying associated [file](https://github.com/micronucleus/micronucleus/blob/master/firmware/usbconfig.h#L209), or you can also reverse it if you want.
