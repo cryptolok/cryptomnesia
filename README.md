@@ -37,6 +37,7 @@ Finally, what if you still want your data afterwards? Well, if you just erased t
 Anyway, let's conclude this pretty long talk before it gets too geo-political/phylosophical and do some practice, but just before that, few demonstrations:
 
 Quick erase the header with customized hardware:
+
 [![](https://img.youtube.com/vi/B8eeKmVKVDw/0.jpg)](https://youtu.be/B8eeKmVKVDw)
 
 Full erase the disk with customized hardware or quick erase the header with stock hardware:
