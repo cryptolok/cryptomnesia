@@ -145,7 +145,7 @@ Lastly, before doing anything, please make sure that you understand what you are
 
 [Cryptomnesia](https://en.wikipedia.org/wiki/Cryptomnesia) is actually a known memory dysfunction.
 
-The name was also partially inspired by an upcoming [game](https://store.steampowered.com/app/999220/Amnesia_Rebirth/).
+The name was also partially inspired by an upcoming [Amnesia game](https://store.steampowered.com/app/999220/Amnesia_Rebirth/).
 
 Theoretically, same thing can be done for mobiles, but in practice it's not that easy and requires too much things to be done correctly. So it's a subject for further research.
 
