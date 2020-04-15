@@ -6,6 +6,8 @@ Linux deniable cryptographic storage eraser based on hardware USB trigger for se
 
 ![](https://github.com/cryptolok/cryptomnesia/raw/master/logo.png)
 
+Quick demo:
+
 [![](https://img.youtube.com/vi/eTOwVK--qHo/0.jpg)](https://youtu.be/eTOwVK--qHo)
 
 Dependencies:
