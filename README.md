@@ -113,7 +113,7 @@ As an alternative to SOIC pins, you can connect programmer directly to DigiSpark
 
 Check-out my [setup](https://github.com/cryptolok/cryptomnesia/tree/master/setup).
 
-![](https://github.com/cryptolok/cryptomnesia/raw/master/setup/connection.jpg){: height="10%" width="10%" }
+![](https://github.com/cryptolok/cryptomnesia/raw/master/setup/connection.jpg)
 
 You can see what those fuse values are for and what they do [here](http://www.engbedded.com/fusecalc). You can also adapt them to suit your needs.
 
