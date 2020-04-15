@@ -4,7 +4,7 @@ Linux deniable cryptographic storage eraser based on hardware USB trigger for se
 
 (hard to find an acronym for that one huh?)
 
-![](https://github.com/cryptolok/cryptonmesia/raw/master/logo.png)
+![](https://github.com/cryptolok/cryptomnesia/raw/master/logo.png)
 
 ![](https://youtu.be/eTOwVK--qHo)
 
@@ -70,7 +70,7 @@ The second one is simulated USB device ID in little-endian, which is "0xc0de"
 
 You may notice that I use CDC library (serial) and not the default USB library, mainly because it's more easy and quick
 	
-4 - Open [my code](https://github.com/cryptolok/cryptomnesia/deadc0de.ino) with IDE
+4 - Open [my code](https://github.com/cryptolok/cryptomnesia/blob/master/deadc0de.ino) with IDE
 
 5 - Compile and upload
 
@@ -86,7 +86,7 @@ As you can see, this is pretty easy setup, but you will have to wait a little bi
 
 2 - Connect SOIC8 clip (also found online) on DigiSpark chip (SOP8 Attiny85) and its pins to your programmer using jumper wires
 
-3 - Set the fuses and upload modified [firmware](https://github.com/cryptolok/cryptomnesia/deadc0de.hex):
+3 - Set the fuses and upload modified [firmware](https://github.com/cryptolok/cryptomnesia/blob/master/deadc0de.hex):
 
 ```bash
 sudo apt-get install avrdude
@@ -98,7 +98,7 @@ avrdude -c USBasp -p attiny85  -U flash:w:deadc0de.hex:i -B 20
 
 As an alternative to SOIC pins, you can connect programmer directly to DigiSpark pins, but that would require soldering them in the first place and then desoldering in order to make the device more or less usable, so I'm not considering it as a good option. Instead of jumpers you can directly reconnect pins on SOIC clip.
 
-Check-out my [setup](https://github.com/cryptolok/cryptomnesia/setup).
+Check-out my [setup](https://github.com/cryptolok/cryptomnesia/tree/master/setup).
 
 You can see what those fuse values are for and what they do [here](http://www.engbedded.com/fusecalc). You can also adapt them to suit your needs.
 
@@ -112,9 +112,9 @@ Nonetheless, if you really need a reprogrammed DigiSpark USB with a custom ID, y
 
 OK, the software part is pretty straight forward.
 
-There is a [quick version](https://github.com/cryptolok/cryptomnesia/cryptomnesia.sh) of wipe, so just the header will be erased and /boot/grub/menu.lst file will be overwritten to hide the presence of encrypted partition (if not using LVM).
+There is a [quick version](https://github.com/cryptolok/cryptomnesia/blob/master/cryptomnesia.sh) of wipe, so just the header will be erased and /boot/grub/menu.lst file will be overwritten to hide the presence of encrypted partition (if not using LVM).
 
-There is is a [full version](https://github.com/cryptolok/cryptomnesia/cryptomnesiaFull.sh), thus deleting MBR/GPT, bootloader and the header. However, this could make much time, at least 5s, based on your /boot size and disk speed (~10 MB/s for SSD and much slower for HDD), thus it's not a bad idea to just go after the encryption keys and metadata, to make the partition unencryptable, since the real key is password protected and stored encrypted itself on the disk (LUKS header), but you can also shrink your /boot partition to it's actual size (about 50-100 MB) to win some time. Anyway, count at least 5-10s in best case to do everything.
+There is is a [full version](https://github.com/cryptolok/cryptomnesia/blob/master/cryptomnesiaFull.sh), thus deleting MBR/GPT, bootloader and the header. However, this could make much time, at least 5s, based on your /boot size and disk speed (~10 MB/s for SSD and much slower for HDD), thus it's not a bad idea to just go after the encryption keys and metadata, to make the partition unencryptable, since the real key is password protected and stored encrypted itself on the disk (LUKS header), but you can also shrink your /boot partition to it's actual size (about 50-100 MB) to win some time. Anyway, count at least 5-10s in best case to do everything.
 
 You can launch the script with autostart or crontab (as root), so it will be launched at boot and monitor for a given USB ID (deadc0de by default, but you can modify it).
 
