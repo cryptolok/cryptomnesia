@@ -75,7 +75,7 @@ Now, there are 2 solutions: easy, but slow, and hard, but fast.
 
 	Replace "0xd0, 0x16" with "0xad, 0xde"
 
-	Replace "0x7e, 0x08" with "0xd", 0xc0"
+	Replace "0x7e, 0x08" with "0xde, 0xc0"
 
 The first one is simulated USB vendor ID in little-endian, which is "0xdead"
 
